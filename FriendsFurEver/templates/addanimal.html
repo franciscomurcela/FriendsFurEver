@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/addanimal.css">
+</head>
+<body class="background-image">
+    <header>
+        <a href="/homeempregado"><img src="../static/shortlogowhite.png" alt=""></a>
+        <div>
+            <a href="/animaisempregado"><img class="menu" src="../static/menuicon.png"></a>
+            <a href="/settingsempregado"><img class="settings" src="../static/settingsGreen.png"></a>
+        </div>
+    </header>
+
+    <div class="box">
+        <label for="profile-pic-input">
+            <img class="profileimg" src="../static/profileanimal.png" alt="Profile Image">
+            <input type="file" id="profile-pic-input" accept="image/*" onchange="previewProfilePic(event)" style="display: none;">
+            <span class="profile-label"></span>
+        </label>
+
+        
+
+        <form action="/addanimal" method="post" id="addanimalform" name="addanimalform">
+            <div class="inputs-container">
+                <p class="text-wrapper">Preencha as informações do animal</p>
+                <div class="inputs">
+                    <input class="inputbox" type="text" id="Nome" placeholder="Insere o nome" name="nome" required>
+                    <input class="inputbox" type="text" id="Id" placeholder="Insere o Id" name="Id" required>
+                    <input class="inputbox" type="text" id="raca" placeholder="Insere a Raça" name="raca" required>
+                    <input class="inputbox" type="text" id="Idade" placeholder="Insere a idade" name="idade" required>
+                    <div style="display: flex; align-items: center;">
+                        <h4 style="margin-left: 15px;">Está adotado?</h4>
+                        <input style="margin-left: 135px;" type="checkbox" id="adocao" name="estadoAdocao">
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <h4 style="margin-left: 15px;">Microchip?</h4>
+                        <input style="margin-left: 160px;" type="checkbox" id="microchip" name="microchip">
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <h4 style="margin-left: 15px;">É cão?</h4>
+                        <input style="margin-left: 193px;" type="checkbox" id="tipo" name="tipo">
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <h4 style="margin-left: 15px;">Saudável?</h4>
+                        <input style="margin-left: 193px;" type="checkbox" id="Healthy" name="Healthy">
+                    </div>
+                    <input class="inputbox" type="text" id="sexo" placeholder="Sexo? ('f' ou 'm')" name="sexo" required>
+                    <input class="inputbox" type="text" id="comportamento" placeholder="Insere o Comportamento" name="comportamento" required>
+                    <input class="inputbox" type="text" id="idmae" placeholder="Insere o Id da mãe" name="idMae">
+                    <input class="inputbox" type="text" id="idpai" placeholder="Insere o Id do pai" name="idPai">
+                    <input class="inputbox" type="text" id="img" placeholder="Insere o caminho para a Imagem" name="img" required>
+                    <button class="element-button">Adicionar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

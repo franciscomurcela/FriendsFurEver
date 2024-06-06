@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/login.css">
+    <title>LoginEmpregado</title>
+</head>
+<body class="background-image">
+    <header>
+        <h1 class="hero-text">ENTRA PARA CONHECERES <br/>NOVOS AMIGOS! <br/> <br/> EMPREGADOS</h1>
+        <img class="logo" src="../static/logo-white.png" alt="">
+    </header>
+    <div class="TextoBig">
+        <h1 style="font-size: 500%;">Faz Login</h1>
+        <h3>Entra com o ID de trabalho</h3>
+    </div>
+
+    <form id="loginForm" name="loginform" action="/empregadologin" method="post">
+        <div class="inputs">
+            <input class="inputbox" type="text" id="id" placeholder="Insere o teu ID de trabalho" name="idtrabalho" required>
+            <input class="inputbox" type="password" placeholder="Insere a tua password" name="password" required>
+            <button class="inputbox">
+                Entrar
+            </button>
+            <a href="/empregadoregister"><h3>Registar Empregado</h3></a>
+        </div>
+    </form>
+
+</body>
+</html>

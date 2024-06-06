@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/animaisempregado.css">
+    <title>AnimaisEmpregado</title>
+</head>
+<body class="background-image">
+    <header>
+
+        <a href="/homeempregado"><img src="../static/shortlogowhite.png" alt=""></a>
+        <div>
+            <a href="/animaisempregado"><img class="menu" src="../static/menugreen.png"></a>
+            <a href="/settingsempregado"><img class="settings" src="../static/settingsicon.png"></a>
+        </div>
+    </header>
+
+   
+      <div class="flex-container">
+        <div class="header-row">
+          <h2>Os nossos animais</h2>
+        </div>
+        <div class="button-row">
+          <button onclick="redirectToPage('/addanimal')">Add Animal</button>
+        </div>
+        <div class="animal-container"></div>
+
+      </div>
+      <script>
+      function redirectToPage(url) {
+        window.location.href = url;
+      }
+      </script>  
+      <script src="../static/Js/animaisempregado.js"></script>
+        
+</body>
+</html>

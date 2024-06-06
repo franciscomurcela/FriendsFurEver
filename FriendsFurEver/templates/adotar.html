@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/settings.css">
+    <title>Animais</title>
+</head>
+  <body class="background-image">
+    
+    <header>
+      <a href="/home"><img src="../static/shortlogowhite.png" alt=""></a>
+      <div>
+        <a href="/animais"><img class="menu" src="../static/menugreen.png"></a>
+        <a href="/settings"><img class="settings" src="../static/settingsicon.png"></a>
+      </div>
+    </header>
+    
+    <div class="box">
+        <label for="profile-pic-input">
+            <img id="petimg" src="#" >
+        </label>
+        
+
+          <div class="inputs-container">
+            <p class="text-wrapper">Informações do Animal</p>
+              <div class="inputs">
+              <input type="hidden" id="Id" name="Id">
+              <p>Nome</p>
+              <input class="inputbox" type="text" id="Nome" name="nome" readonly>
+              <p>Raça</p>
+              <input class="inputbox" type="text" id="raca" name="raca" readonly>
+              <p>Idade</p>
+              <input class="inputbox" type="text" id="Idade"name="idade" readonly>
+              <p>Adotado</p>
+              <input class="inputbox" type="text" id="adocao"  name="adocao" readonly>
+              <p>Microchip</p>
+              <input class="inputbox" type="text" id="microchip" name="microchip" readonly>
+              <p>Sexo</p>
+              <input class="inputbox" type="text" id="sexo"  name="sexo" readonly>
+              <p>Comportamento</p>
+              <input class="inputbox" type="text" id="comportamento"  name="comportamento" readonly>
+              <p>Mãe</p>
+              <input class="inputbox" type="text" id="idmae"  name="idMae" readonly>
+              <p>Pai</p>
+              <input class="inputbox" type="text" id="idpai"  name="idPai" readonly>
+              <p>Saudável</p>
+              <input class="inputbox" type="text" id="Healthy"  name="healthy" readonly>
+
+              <button class="element-button" onclick="window.location.href='/adotarmenu?id='+document.getElementById('Id').value">Adotar</button></div>
+         </div>
+
+        </div>
+
+
+  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/Js/adotarredirect.js"></script>
+</html> 

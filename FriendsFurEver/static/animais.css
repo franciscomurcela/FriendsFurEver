@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+.background-image {
+    background-color: white;
+}
+
+header{
+    background-image: url(../static/headerhome.png);
+    padding: 55px;
+    background-size: cover;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.filtroDesc {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 25px;
+    margin-right: 300px;
+}
+
+.filtro {
+    font-size: 16px; /* Adjust the font size */
+    padding: 10px; /* Add some padding */
+
+    border-radius: 15px; /* Add rounded corners */
+    background-color: #ffffff; /* Change the background color */
+    color: #000000; /* Change the text color */
+    width: 100px; /* Adjust the width */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Add a shadow */
+
+}
+
+#filter{
+    border: none; /* Remove the default border */
+    outline: none; /* Remove the default outline */
+}
+
+
+.filtro:focus {
+    border-color: #4ecf12; /* Change the border color when the dropdown is focused */
+}
+
+.menu{
+    cursor: pointer;
+    height:75px
+}
+      
+.text-wrapper {
+    text-align: absolute;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+.img {
+    width: 250px;
+    height: 208px;
+    object-fit: cover;
+}
+
+.group {
+    flex-basis: calc(25% - 10px); /* Adjust this value to control how many items per row */
+    margin: 50px;
+    position: relative; /* Add this if you need to position elements within the .group div */
+}
+      
+.animal-container {
+    margin-left: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.pagination a {
+    color: #333;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

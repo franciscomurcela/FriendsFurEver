@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/adotarmenu.css">
+    <script>
+        window.onload = function() {
+            // Get the id from the URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var id = urlParams.get('id');
+
+            // Set the id as the value of the hidden id input field
+            document.getElementById('Id').value = id;
+        };
+    </script>
+</head>
+<body class="background-image">
+    <header>
+        <a href="/home"><img src="../static/shortlogowhite.png" alt=""></a>
+        <div>
+            <a href="/animais"><img class="menu" src="../static/menuicon.png"></a>
+            <a href="/settings"><img class="settings" src="../static/settingsGreen.png"></a>
+        </div>
+    </header>
+
+    <h1 style="margin-top: 20px;" >Menu Adoção</h1>
+    <h2>Preenche todas as tuas informações nas definições para poderes adotar</h2>
+        <form action="/adotarmenu" method="post" id="adotanteform" name="adotanteform">
+            <div class="inputs-container">
+                <p class="text-wrapper"></p>
+                <div class="inputs">
+                    <input type="hidden" id="Id" name="Id">
+                    <input class="inputbox" type="text" id="cc" placeholder="Insere o teu CC" name="cc" required>
+
+                    <button class="element-button">Inserir</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+    <script>
+    document.getElementById('adotanteform').addEventListener('submit', function(e) {
+        e.preventDefault();
+    
+        var cc = document.getElementById('cc').value;
+        var id = document.getElementById('Id').value;
+    
+        fetch('/adotarmenu', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                'cc': cc,
+                'Id': id
+            })
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+    
+            // Redirect to animais.html
+            window.location.href = '/agradecimento';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+    </script>
+</html>

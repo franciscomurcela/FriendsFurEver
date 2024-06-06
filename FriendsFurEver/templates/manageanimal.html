@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/addanimal.css">
+</head>
+<body class="background-image">
+    <header>
+        <a href="/homeempregado"><img src="../static/shortlogowhite.png" alt=""></a>
+        <div>
+            <a href="/animaisempregado"><img class="menu" src="../static/menuicon.png"></a>
+            <a href="/settingsempregado"><img class="settings" src="../static/settingsGreen.png"></a>
+        </div>
+    </header>
+
+    <div class="box">
+        <div class="column">
+            <label for="profile-pic-input">
+                <img id="imgpet" src="#" alt="Profile Image">
+            </label>
+
+            <button class="element-button" id="removeanimal" style="margin-top: 20px; margin-right: 50px;" onclick="removeAnimal(petId)">Remover</button>
+        </div>
+
+        <form action="/editanimalupdate" method="post" id="editanimalform" name="editanimalform">
+            <div class="inputs-container">
+                <p class="text-wrapper">Edite as informações do animal ou remova-o</p>
+                <div class="inputs">
+                    <p>Nome</p>
+                    <input class="inputbox" type="text" id="Nome" placeholder="Insere o nome" name="Nome" >
+                    <p>Id</p>
+                    <input class="inputbox" type="digit" id="Id" placeholder="Insere o Id" name="Id" >
+                    <p>Raça</p>
+                    <input class="inputbox" type="text" id="raca" placeholder="Insere a Raça" name="Raca" >
+                    <p>Idade</p>
+                    <input class="inputbox" type="number" id="Idade" placeholder="Insere a idade" name="Idade" >
+                    <p>Adotado</p>
+                    <input class="inputbox" type="text" id="adocao" placeholder="Está adotado?" name="EstadoDeAdocao" >
+                    <p>Microchip</p>
+                    <input class="inputbox" type="text" id="microchip" placeholder="Tem Microchip?" name="Microchip" >
+                    <p>Sexo</p>
+                    <select class="inputbox" id="Sexo" name="Sexo">
+                        <option value="f">Fêmea</option>
+                        <option value="m">Macho</option>
+                    </select>
+                    <p>Comportamento</p>
+                    <input class="inputbox" type="text" id="comportamento" placeholder="Insere o Comportamento" name="Comportamento" >
+                    <p>Mãe</p>
+                    <input class="inputbox" type="number" id="idmae" placeholder="Insere o Id da mãe" name="IdMae">
+                    <p>Pai</p>
+                    <input class="inputbox" type="number" id="idpai" placeholder="Insere o Id do pai" name="IdPai">
+                    <p>Imagem</p>
+                    <input class="inputbox" type="text" id="img" placeholder="Insere o caminho para a Imagem" name="static">
+                    <p>Saudável</p>
+                    <input class="inputbox" type="text" id="Healthy" placeholder="Insere o estado de saúde" name="Healthy">
+                    <button class="element-button">Atualizar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/Js/editaranimalget.js"></script>
+    <script src="../static/Js/editanimalupdate.js"></script>
+</html>

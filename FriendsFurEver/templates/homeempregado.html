@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/home.css">
+    <title>HomeEmpregado</title>
+</head>
+<body class="background-image">
+    <header>
+        <img src="../static/shortlogowhite.png">
+        <div>
+            <a href="/animaisempregado"><img class="menu" src="../static/menuicon.png"></a>
+            <a href="/settingsempregado"><img class="settings" src="../static/settingsicon.png"></a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2 style="margin-top: 20px;">Empregado</h2>
+        <img class="logofont" src="../static/font.png">
+        <div class="photodiv">
+            <img src="../static/imagehome1.png">
+            <img src="../static/imagehome2.png">
+        </div>
+        <div class="stats">
+        <h2 class="stat-box" id="totalPets">
+            <span class="stat-title">Número total de animais:</span>
+            <span class="stat-value">-</span>
+        </h2>
+        
+        <h2 class="stat-box" id="totalAdoptedPets">
+            <span class="stat-title">Número total de animais adotados:</span>
+            <span class="stat-value">-</span>
+        </h2>
+        
+        <h2 class="stat-box" id="totalEmployees">
+            <span class="stat-title">Número total de empregados:</span>
+            <span class="stat-value">-</span>
+        </h2>
+        
+        <h2 class="stat-box" id="percentageAdoptedPets">
+            <span class="stat-title">Percentagem de animais adotados:</span>
+            <span class="stat-value">-</span>
+        </h2>
+        
+        <h2 class="stat-box" id="mostCommonBreed">
+            <span class="stat-title">Raça mais comum:</span>
+            <span class="stat-value">-</span>
+        </h2>
+        </div>
+    </div>
+
+    <h1>Procura de Adocoes por Utilizador</h1>
+    <div class="search-container">
+        <form>
+            <input type="text" placeholder="Search.." name="search">
+        </form>
+    </div>
+
+    <div class="user-container"></div>
+
+    <script src="../static/Js/stats.js"></script>
+    <script src="../static/Js/search.js"></script>
+</body>
+</html>

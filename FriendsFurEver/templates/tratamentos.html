@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/addanimal.css">
+</head>
+<body class="background-image">
+    <header>
+        <a href="/homeempregado"><img src="../static/shortlogowhite.png" alt=""></a>
+        <div>
+            <a href="/animaisempregado"><img class="menu" src="../static/menuicon.png"></a>
+            <a href="/settingsempregado"><img class="settings" src="../static/settingsGreen.png"></a>
+        </div>
+    </header>
+
+    <div class="box">
+        <div class="column">
+            <label for="profile-pic-input">
+                <img id="imgpet" src="#" alt="Profile Image">
+            </label>
+        </div>
+
+        <form action="/tratamentos" method="post" id="tratamentosform" name="tratamentosform">
+            <div class="inputs-container">
+                <p class="text-wrapper">Edite os tratamentos/vacinas do animal</p>
+                <div class="inputs">
+                    <p>Nome</p>
+                    <input class="inputbox" type="text" id="Nome" placeholder="Insere o nome" name="Nome" readonly>
+                    <p>Id</p>
+                    <input class="inputbox" type="number" id="Id" placeholder="Insere o Id" name="Id" readonly>
+                    <p>Leishmaniose</p>
+                    <input class="inputbox" type="number" id="Leishmaniose" placeholder="Leishmaniose" name="Leishmaniose" >
+                    <p>Gripe</p>
+                    <input class="inputbox" type="number" id="Gripe" placeholder="Gripe" name="Gripe" >
+                    <p>Raiva</p>
+                    <input class="inputbox" type="number" id="Raiva" placeholder="Raiva" name="Raiva" >
+                    <p>Desparasitado</p>
+                    <input class="inputbox" type="number" id="Desparasitado" placeholder="Desparasitado" name="Desparasitado" >
+                    <p>Esterilizado</p>
+                    <input class="inputbox" type="number" id="Esterilizado" placeholder="Esterilizado" name="Esterilizado" >
+                    <button class="element-button">Atualizar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/Js/editaranimalget.js"></script>
+</html>
